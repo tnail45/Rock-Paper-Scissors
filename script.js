@@ -4,11 +4,11 @@ let computerScore = 0;
 let gameScore = 0;
 
 function getComputerChoice() {
-    let x = Math.floor(Math.random() * 10);
-    if (x <= 3) {
-        return "rock";
+    let randomChoice = Math.floor(Math.random() * 10);
+    if (randomChoice <= 3) {
+        return "rock"
     }
-    else if (x <= 6) {
+    else if (randomChoice <= 6) {
         return "paper"
     }
     else {
