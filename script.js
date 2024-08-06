@@ -1,8 +1,9 @@
-
+// initialize global scores to 0
 let humanScore = 0;
 let computerScore = 0;
 let gameScore = 0;
 
+//function to retrive a random choice from the computer
 function getComputerChoice() {
     let randomChoice = Math.floor(Math.random() * 10);
     if (randomChoice <= 3) {
@@ -16,11 +17,13 @@ function getComputerChoice() {
     }
 }
 
+// function to retrive the human's input
 function getHumanChoice () {
     let entry = prompt("Rock, Paper, or Scissors?")
     return entry;
 }
 
+// function to play a round by comparing the computer choice to the human choice and determining a round winner
 function playRound(humanChoice, computerChoice) {
     humanChoice = getHumanChoice().toLowerCase();
     computerChoice = getComputerChoice();
@@ -34,7 +37,7 @@ function playRound(humanChoice, computerChoice) {
         return alert("Tie!")
     }
 }
-
+// function to play the entire game by looping until 5 round wins have been reached and comparing scores to determine the game winner
 function playGame() {
     while (gameScore < 5) {
         playRound()
