@@ -28,13 +28,13 @@ function playRound(humanChoice, computerChoice) {
     humanChoice = getHumanChoice().toLowerCase();
     computerChoice = getComputerChoice();
     if ((humanChoice == "rock") && (computerChoice == "scissors") || (humanChoice == "paper") && (computerChoice == "rock") || (humanChoice == "scissors") && (computerChoice == "paper")) {
-        return alert("You won this round"), (humanScore++, gameScore++)
+        return console.log("You won this round"), (humanScore++, gameScore++)
     }
     else if ((humanChoice == "rock") && (computerChoice == "paper") || (humanChoice == "paper") && (computerChoice == "scissors") || (humanChoice == "scissors") && (computerChoice == "rock")) {
-        return alert("The computer won this round!"), (computerScore++, gameScore++)
+        return console.log("The computer won this round!"), (computerScore++, gameScore++)
     }
     else {
-        return alert("Tie!")
+        return console.log("Tie!")
     }
 }
 // function to play the entire game by looping until 5 round wins have been reached and comparing scores to determine the game winner
@@ -43,10 +43,10 @@ function playGame() {
         playRound()
     }
     if ((gameScore >= 5) || (humanScore >= 3)) {
-        alert("You won the game!")
+        console.log("You won the game!")
     }
     else if ((gameScore >= 5) || (computerScore >= 3)) {
-        alert("The computer won the game")
+        console.log("The computer won the game")
     }
 }
 playGame();
