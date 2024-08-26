@@ -9,7 +9,7 @@ function getComputerChoice() {
     if (randomChoice <= 3) {
         return "rock"
     }
-    else if (randomChoice <= 6) {
+    else if (randomChoice >= 7) {
         return "paper"
     }
     else {
@@ -19,7 +19,7 @@ function getComputerChoice() {
 
 // function to retrive the human's input
 function getHumanChoice () {
-    let entry = prompt("Rock, Paper, or Scissors?")
+    let entry = console.log("Rock, Paper, or Scissors?")
     return entry;
 }
 
@@ -38,7 +38,7 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 // function to play the entire game by looping until 5 round wins have been reached and comparing scores to determine the game winner
-function playGame() {
+/*function playGame() {
     while (gameScore < 5) {
         playRound()
     }
@@ -49,4 +49,4 @@ function playGame() {
         console.log("The computer won the game")
     }
 }
-playGame();
+playGame(); */
